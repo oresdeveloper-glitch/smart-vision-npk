@@ -178,7 +178,7 @@ def _predict(img: Image.Image, crop_type: str = None) -> Dict:
 
 def _rebuild_model(backbone: str, image_size: int):
     import tensorflow as tf
-    from tensorflow.keras import layers
+    from tensorflow.keras import layers, regularizers
     num_classes = 4
 
     if backbone == "local_cnn":
