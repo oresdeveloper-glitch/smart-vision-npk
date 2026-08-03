@@ -1,0 +1,17 @@
+{
+  "class_names": [
+    "maize",
+    "beans",
+    "unknown"
+  ],
+  "feature_dim": 1280,
+  "image_size": 224,
+  "val_accuracy": 1.0,
+  "per_class_accuracy": {
+    "maize": 0.9983333333333333,
+    "beans": 0.9966666666666667,
+    "unknown": 1.0
+  },
+  "num_train": 1785,
+  "num_val": 315
+}

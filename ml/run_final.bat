@@ -1,0 +1,1 @@
+@"C:\Users\This PC\Downloads\npk-detection-app\ml\.venv\Scripts\python.exe" -u "C:\Users\This PC\Downloads\npk-detection-app\ml\train_final.py" > "C:\Users\This PC\Downloads\npk-detection-app\ml\final_log.txt" 2>&1

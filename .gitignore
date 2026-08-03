@@ -1,0 +1,82 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build
+dist/
+dist-ssr/
+*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Env
+.env
+.env.production
+
+# Python / ML
+__pycache__/
+*.pyc
+.venv/
+ml/artifacts/*.h5
+ml/artifacts/*.weights.h5
+ml/*_log.txt
+
+# Large training data (4.3 GB) - not for VCS
+data/
+data/**
+!data/.gitkeep
+*.tfrecord
+
+# Auth database (contains password hashes)
+ml/users.db
+ml/users.db-journal
+
+# Server run logs / batch files
+ml/server.out.log
+ml/server.err.log
+ml/run_server.bat
+ml/start_frontend.bat
+ml/run_all.bat
+frontend_run.log
+server_run.log
+
+# Generated validation artifacts
+ml/validate_*.py
+ml/crop_features.json
+ml/artifacts/crop_classifier/crop_features.json
+
+# Temp / backup models
+ml/artifacts/npk_backup/
+ml/artifacts/best.*.ckpt.resnet50_temp
+ml/artifacts/best.ckpt.*.temp/
+ml/artifacts/npk_resnet50_export.bak/
+ml/artifacts/*.bak
+ml/artifacts/best.ckpt
+ml/artifacts/best.ckpt.*
+ml/artifacts/checkpoint
+ml/artifacts/*_history_summary.json
+ml/artifacts/history_*.json
+ml/artifacts/eval_data.json
+ml/artifacts/*.png
+ml/artifacts/crop_features.json
+ml/artifacts/meta.json.bak
+ml/artifacts/meta_backup.json
+ml/artifacts/README_TRAINING_HISTORY_OUTPUT.md

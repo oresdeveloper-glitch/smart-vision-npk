@@ -1,0 +1,19 @@
+{
+  "crop": "maize",
+  "class_to_idx": {
+    "nitrogen": 0,
+    "phosphorus": 1,
+    "potassium": 2,
+    "healthy": 3
+  },
+  "idx_to_class": {
+    "0": "nitrogen",
+    "1": "phosphorus",
+    "2": "potassium",
+    "3": "healthy"
+  },
+  "image_size": 160,
+  "model": "mobilenetv2",
+  "test_accuracy": 0.9424999952316284,
+  "test_loss": 0.3910950720310211
+}
