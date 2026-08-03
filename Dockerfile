@@ -1,9 +1,9 @@
-FROM node:20-slim AS frontend-build
+FROM node:24-slim AS frontend-build
 WORKDIR /app
-COPY package.json vite.config.ts tsconfig.json tsconfig.app.json tsconfig.node.json index.html ./
+COPY package.json package-lock.json vite.config.ts tsconfig.json tsconfig.app.json tsconfig.node.json index.html ./
 COPY public ./public
 COPY src ./src
-RUN npm install --no-audit --no-fund
+RUN npm ci --no-audit --no-fund
 RUN npx vite build
 
 FROM python:3.10-slim
