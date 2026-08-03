@@ -40,9 +40,7 @@ ml/artifacts/*.weights.h5
 ml/*_log.txt
 
 # Large training data (4.3 GB) - not for VCS
-data/
-data/**
-!data/.gitkeep
+/data/
 *.tfrecord
 
 # Auth database (contains password hashes)
