@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: smart-vision-npk
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    healthCheckPath: /health
+    buildFilter:
+      paths:
+        - src/**
+        - ml/**
+        - public/**
+        - package.json
+        - package-lock.json
+        - vite.config.ts
+        - tsconfig*.json
+        - index.html
+        - Dockerfile
