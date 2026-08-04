@@ -53,6 +53,11 @@ ml/server.err.log
 ml/run_server.bat
 ml/start_frontend.bat
 ml/run_all.bat
+ml/run_train_*.bat
+ml/per_crop_*.txt
+ml/proc_status.txt
+ml/runscripts.txt
+ml/unknown_counts.txt
 frontend_run.log
 server_run.log
 

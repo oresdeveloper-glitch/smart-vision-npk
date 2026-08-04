@@ -106,9 +106,9 @@ export async function detectCrop(imageData: string): Promise<CropDetectionResult
     return data as CropDetectionResult;
   } catch (error) {
     if (error instanceof Error && error.name === 'AbortError') {
-      return { valid: true, cropType: 'maize', confidence: 50, error: null };
+      return { valid: false, cropType: null, confidence: 0, error: 'ML server took too long. Make sure the trained model is running.' };
     }
-    return { valid: true, cropType: 'maize', confidence: 50, error: null };
+    return { valid: false, cropType: null, confidence: 0, error: 'Cannot reach ML server. Start the Flask backend and try again.' };
   } finally {
     window.clearTimeout(timeout);
   }

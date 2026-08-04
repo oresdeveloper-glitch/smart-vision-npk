@@ -52,10 +52,12 @@ export default function ScanScreen() {
           setDetectConfidence(detection.confidence);
           setProgress(80);
         }
-      } catch {
-        setCropType('maize');
+      } catch (e) {
+        setError(e instanceof Error ? e.message : 'Crop detection failed. Please try again.');
+        setImageData(null);
+        setCropType(null);
         setDetectConfidence(0);
-        setProgress(80);
+        setProgress(0);
       } finally {
         setDetecting(false);
       }

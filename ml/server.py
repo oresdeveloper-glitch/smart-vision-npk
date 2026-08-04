@@ -416,9 +416,12 @@ def predict():
 
     try:
         img = _decode_base64_image(image_data)
-        if not crop_type and crop_centroids is not None:
-            crop_result = _detect_crop(img)
-            crop_type = crop_result.get("cropType")
+        # Always run the real crop-reject model first so unknown/non-crop
+        # images are never force-analyzed by the NPK model.
+        crop_result = _detect_crop(img)
+        if not crop_result.get("valid"):
+            return jsonify(crop_result), 400
+        crop_type = crop_type or crop_result.get("cropType")
         return jsonify(_predict(img, crop_type))
     except Exception as e:
         return jsonify({"error": str(e)}), 500

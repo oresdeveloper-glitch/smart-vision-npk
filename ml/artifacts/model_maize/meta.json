@@ -14,6 +14,6 @@
   },
   "image_size": 160,
   "model": "mobilenetv2",
-  "test_accuracy": 0.9424999952316284,
-  "test_loss": 0.3910950720310211
+  "test_accuracy": 0.9083333611488342,
+  "test_loss": 0.4437072277069092
 }
