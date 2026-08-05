@@ -1,12 +1,25 @@
 {
   "version": 2,
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "framework": null,
   "env": {
     "VITE_ML_SERVER_URL": "https://closable-anybody-croon.ngrok-free.dev"
   },
   "rewrites": [
-    { "source": "/((?!assets/|images/).*)", "destination": "/index.html" }
-  ]
+    {
+      "source": "/((?!assets/|images/).*)",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": {
+        "type": "service",
+        "service": "smart-vision-npk"
+      }
+    }
+  ],
+  "services": {
+    "smart-vision-npk": {
+      "root": ".",
+      "framework": "vite"
+    }
+  }
 }

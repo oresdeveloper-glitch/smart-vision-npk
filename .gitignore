@@ -83,3 +83,5 @@ ml/artifacts/crop_features.json
 ml/artifacts/meta.json.bak
 ml/artifacts/meta_backup.json
 ml/artifacts/README_TRAINING_HISTORY_OUTPUT.md
+
+.vercel
